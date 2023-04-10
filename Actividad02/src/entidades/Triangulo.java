@@ -19,16 +19,16 @@ public class Triangulo {
         this.lado1 = lado1;
         this.lado2 = lado2;
         this.lado3 = lado3;
-        this.es_triangulo = true;
+        this.es_triangulo = esTriangulo();
     }
     
-   private void esTriangulo(){
-       es_triangulo = lado1 + lado2 < lado3;
+   private boolean esTriangulo(){
+       return lado1 + lado2 > lado3;
    }
    
    public void tipoTriangulos(){
-       esTriangulo();
-       if(!es_triangulo){
+       
+       if(es_triangulo){
           if(lado1 == lado2 && lado1 == lado3){
               System.out.println("El tipo de triangulo es: Equilatero");
           } else{

@@ -11,7 +11,7 @@ public class Empleado {
     private char categoria;
     private String nombre;
     private byte antiguedad;
-    private int totalACobrar = 0, sueldoCategoriaA = 650,sueldoCategoriaB = 450, plusAntiguedad = 30 ;
+    private int totalACobrar, sueldoCategoriaA ,sueldoCategoriaB, plusAntiguedad;
     
     
     public Empleado() {
@@ -21,7 +21,10 @@ public class Empleado {
         this.categoria = categoria;
         this.nombre = nombre;
         this.antiguedad = antiguedad;
-        
+        this.totalACobrar = 0;
+        this.sueldoCategoriaA = 650;
+        this.sueldoCategoriaB = 450;
+        this.plusAntiguedad = 30;
     }
     
     public void calcularSueldo(){
